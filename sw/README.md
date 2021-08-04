@@ -55,7 +55,7 @@ Den API Keys braucht es für die Programmierung des Controllers via Web.
 Die verschiedenen Start Mode haben folgende Bedeutung:
 * **Internet Mode** - Programmierung erfolgt mittels Web IDE - [https://flow.m5stack.com](https://flow.m5stack.com)
 * **USB Mode** - Programmierung erfolgt via Offline UIFlow IDE
-* **APP Mode** - das letzte Programm wird ausgeführt. I.d.R. gespeichert als `main.py`. Eine Programmierung ist diesem Mode ist nicht möglich.
+* **APP Mode** - das letzte Programm wird ausgeführt. I.d.R. gespeichert als `main.py`. Eine Programmierung ist diesem Mode nicht möglich.
 
 Die Modi können via Burning Tool oder nach einem `Reset/Power` umgestellt werden. 
 
