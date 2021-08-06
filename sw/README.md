@@ -114,7 +114,4 @@ In der `Python` Ansicht sind evtl. bereits gespeicherte Python Scripts auf dem C
 
 `main.py` ist I.d.R. das Hauptprogramm, welches im **App Mode** ausgeführt ist.
 
-
-
-
-
+**Tip**: [Web Version](https://flow.m5stack.com/) von UIFlow verwenden und gleichzeitig **COM Monitor** im [Burning Tool](#burning-tool) öffnen. Im **COM Monitor** werden Debugging und Fehlermeldungen angezeigt.
