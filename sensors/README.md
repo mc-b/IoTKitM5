@@ -36,7 +36,7 @@ Ein Signal mit 0 Pegel kann erzeugt werden, wenn sich der S-Pol des Magneten nah
 *   Zur Geschwindigkeitsmessung, z.B. für E-Bikes.
 *   In der Kraftwerkstechnik zur Erfassung der Turbinendrehzahl.
 
-**Beispiel mit Core2 und Hall Sensor an Port A**
+**Beispiel mit Core2 und Hall Sensor an Port A** - [hall-sensor.m5f](hall-sensor.m5f)
 
 ![](images/hall-sensor.png)
 
@@ -80,7 +80,7 @@ Die [PIR Sensor Unit](https://docs.m5stack.com/en/unit/pir) liefert 1 wenn eine 
 *   Einschalten einer Beleuchtung
 *   Auslösen eines Alarms
 
-**Beispiel mit Core2 und PIR Sensor an Port A**
+**Beispiel mit Core2 und PIR Sensor an Port A** - [pir-sensor.m5f](pir-sensor.m5f)
 
 ![](images/pir-sensor.png)
 
