@@ -10,7 +10,7 @@ Software
 * [Einleitung](#einleitung)
 * [Hardware Driver](#hardware-driver)
 * [Burning Tool](#burning-tool)
-* [Konfiguration / Start Mode](#configuration--start-mode)
+* [Konfiguration / Start Mode](#konfiguration--start-mode)
 * [UIFlow IDE](#uiflow)
 
 ### Einleitung
