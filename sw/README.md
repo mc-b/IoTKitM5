@@ -1,5 +1,19 @@
 Software
 --------
+***
+
+> [⇧ **Home**](../README.md)
+
+
+### Inhaltsverzeichnis
+
+* [Einleitung](#einleitung)
+* [Hardware Driver](#hardware-driver)
+* [Burning Tool](#burning-tool)
+* [UIFlow IDE](#uiflow)
+
+### Einleitung
+***
 
 Die M5Stack Main Controller können mittels:
 
@@ -21,6 +35,9 @@ Die nötigen Schritte sind im **Quick Start** jedes Controllers beschrieben.
 Die nachfolgenden Anleitungen gehen auf Besonderheiten ein, welche in den **Quick Start** Tutorials fehlen.
 
 ### Hardware Driver
+***
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 Der Hardware Driver stellt einen USB Seriellen Port (Windows COMx, Linux/Mac /dev/ttyUSB) zur Verfügung.
 
@@ -29,7 +46,10 @@ Der Hardware Driver stellt einen USB Seriellen Port (Windows COMx, Linux/Mac /de
 * **M5Stack Controller** brauchen den [cp210x driver](https://docs.m5stack.com/en/quick_start/core2/m5stack_core2_get_started_MicroPython).
 * **M5Stick** und **Atom** brauchen den [FTDI USB Driver](https://docs.m5stack.com/en/quick_start/atom/atom_quick_start_uiflow). Der von Windows installierte Driver funktioniert nicht sauber.
 
-### Burning tool
+### Burning Tool
+***
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 ![](images/burningtool.png)
 
@@ -45,6 +65,9 @@ Dient zum Updaten der Firmware und Einstellen von Konfigurationen wie z.B. WLAN 
 **Dieses Tools sollte immer Installiert werden, um die Controller in den Urzustand zurück setzen zu können.**
 
 ### Configuration / Start Mode
+***
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 ![](images/configuration.png)
 
@@ -66,16 +89,19 @@ Eine Anleitung findet sich am Ende jeden **Quick Start** Tutorials.
 Ansonsten sind nur WLAN SSID und Password zu setzen. Die anderen Werte sollten auf den Standardeinstellungen belassen werden.
 
 ### UIFlow
+***
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
 
 ![](images/uiflow.png)
 
 - - -
 
-Die UIFlow ist die bevorzugte Entwicklungsumgebung die Controller.
+Die UIFlow ist die bevorzugte Entwicklungsumgebung für die Controller.
 
 Vereinfach basiert UIFlow auf [Micropython](https://micropython.org/) und [Blockly](https://developers.google.com/blockly) bzw. vereint diese zu einem Produkt.
 
-Die Programmierung kann Grafisch (empfohlen) oder via Micropython erfolgen.
+Die Programmierung kann Grafisch (empfohlen) oder via [Micropython](https://micropython.org/) erfolgen.
 
 In der Grafischen Ansicht, können neue Sensoren oder Aktoren via `+` Button unter `Units` hinzugefügt werden. Pin Belegungen, werden dann automatisch, je nach Controller, automatisch gesetzt. Unter `Units` werden mögliche Befehle angezeigt.
 
