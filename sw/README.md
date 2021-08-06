@@ -12,6 +12,7 @@ Software
 * [Burning Tool](#burning-tool)
 * [Konfiguration / Start Mode](#konfiguration--start-mode)
 * [UIFlow IDE](#uiflow)
+* [Adafruit MicroPython tool - ampy](#ampy)
 
 ### Einleitung
 ***
@@ -115,3 +116,30 @@ In der `Python` Ansicht sind evtl. bereits gespeicherte Python Scripts auf dem C
 `main.py` ist I.d.R. das Hauptprogramm, welches im **App Mode** ausgeführt ist.
 
 **Tip**: [Web Version](https://flow.m5stack.com/) von UIFlow verwenden und gleichzeitig **COM Monitor** im [Burning Tool](#burning-tool) öffnen. Im **COM Monitor** werden Debugging und Fehlermeldungen angezeigt.
+
+### Ampy
+***
+
+> [⇧ **Nach oben**](#inhaltsverzeichnis)
+
+Das Adafruit MicroPython tool - [ampy](https://github.com/scientifichackers/ampy) ist ein nützliches Werkzeug um Python Dateien von/nach den Controllern zu kopieren.
+
+Die so kopierten Python Dateien, können dann über das **App Menu** gestartet werden. Eine weitere Programmierung ist nicht erforderlich.
+
+Für den Einsatz des Tools ist der Controller in den **App Mode** zu versetzen.
+
+Beispiel kopieren des Hauptprogrammes auf den Controller:
+
+    ampy -p COM4 put main.py
+    
+Um mehrere Dateien zu kopieren und im **App Menu** verfügbar zu machen, ist 
+* ein Verzeichnis `apps` anzulegen   
+* alle Python Dateien in dieses Verzeichnis zu kopieren
+* der nachfolgende Befehl aufzurufen
+
+    ampy -p COM4 put apps 
+
+**Links**
+
+* [Install ampy](https://learn.adafruit.com/micropython-basics-load-files-and-run-code/install-ampy)
+
