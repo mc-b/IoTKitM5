@@ -19,13 +19,15 @@ Sensoren sind technische Bauteile, die Eigenschaften der Umgebung (z. B.: Wärme
 
 Hall Sensor Unit
 
+Quelle: M5Stack
+
 - - - 
 
 Ein [Hall Sensor](http://de.wikipedia.org/wiki/Hall-Sensor) (auch Hall-Sonde oder Hall-Geber, nach Edwin Hall) nutzt den Hall-Effekt zur Messung von Magnetfeldern.
 
 [Hall-Effekt-Unit](https://docs.m5stack.com/en/unit/hall) integriert mit drei A3144E Hall-Sensor-Schaltern, die von integrierten Gate-Schaltungen der Serie 74HC verarbeitet werden.
 
-Ein Signal mit niedrigem Pegel kann erzeugt werden, wenn sich der S-Pol des Magneten nahe der Oberseite des Sensors oder der N-Pol nahe der Rückseite befindet und die interne LED-Anzeige aufleuchtet.
+Ein Signal mit 0 Pegel kann erzeugt werden, wenn sich der S-Pol des Magneten nahe der Oberseite des Sensors oder der N-Pol nahe der Rückseite befindet und die interne LED-Anzeige aufleuchtet.
 
 **Anwendungen**
 
@@ -60,6 +62,10 @@ Ein Signal mit niedrigem Pegel kann erzeugt werden, wenn sich der S-Pol des Magn
 ***
 
 ![](https://static-cdn.m5stack.com/resource/docs/static/assets/img/product_pics/unit/pir/unit_pir_01.webp)
+
+PIR Sensor Unit
+
+Quelle: M5Stack
 
 - - -
 
