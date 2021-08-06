@@ -75,6 +75,10 @@ Sind kostengünstige Controller (~ CHF 10.-).
 * [Atom Lite](https://docs.m5stack.com/en/core/atom_lite)
 * [Atom Matrix](https://docs.m5stack.com/en/core/atom_matrix)
 
+- - -
+
+![](images/atombase.png)
+
 Zusätzlich existieren [Atom Base](https://docs.m5stack.com/en/products) Produkte. Diese werden jeweils mit einem Atom Lite Controller und einem Zusatzmodul z.B. für:
 
 * Steuerung von Motoren und Servo - [Motion](https://docs.m5stack.com/en/atom/atom_motion)
