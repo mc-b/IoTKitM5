@@ -36,7 +36,7 @@ Ein Signal mit niedrigem Pegel kann erzeugt werden, wenn sich der S-Pol des Magn
 
 **Beispiel mit Core2 und Hall Sensor an Port A**
 
-![](images/hallsensor.png)
+![](images/hall-sensor.png)
 
 - - -
 
@@ -76,7 +76,7 @@ Die [PIR Sensor Unit](https://docs.m5stack.com/en/unit/pir) liefert 1 wenn eine 
 
 **Beispiel mit Core2 und PIR Sensor an Port A**
 
-![](images/pirsensor.png)
+![](images/pir-sensor.png)
 
 - - -
 
