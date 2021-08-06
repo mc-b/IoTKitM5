@@ -10,6 +10,7 @@ Software
 * [Einleitung](#einleitung)
 * [Hardware Driver](#hardware-driver)
 * [Burning Tool](#burning-tool)
+* [Konfiguration / Start Mode](#configuration--start-mode)
 * [UIFlow IDE](#uiflow)
 
 ### Einleitung
@@ -64,7 +65,7 @@ Dient zum Updaten der Firmware und Einstellen von Konfigurationen wie z.B. WLAN 
 
 **Dieses Tools sollte immer Installiert werden, um die Controller in den Urzustand zurück setzen zu können.**
 
-### Configuration / Start Mode
+### Konfiguration / Start Mode
 ***
 
 > [⇧ **Nach oben**](#inhaltsverzeichnis)
@@ -72,6 +73,8 @@ Dient zum Updaten der Firmware und Einstellen von Konfigurationen wie z.B. WLAN 
 ![](images/configuration.png)
 
 - - -
+
+Mittels des Burning Tools, erfolgt auch die Konfiguration der Controller.
 
 Den API Keys braucht es für die Programmierung des Controllers via Web.
 
