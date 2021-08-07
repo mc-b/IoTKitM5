@@ -2,7 +2,7 @@ Aktoren
 -------
 ***
 
-> [⇧ **Home**](https://github.com/iotkitv3/intro)
+> [⇧ **Home**](../)
 
 
 Aktoren (Wandler; Antriebselemente) setzen die elektronischen Signale in mechanische Bewegung oder andere physikalische Grössen um und greifen damit aktiv in die Umgebung des eingebetteten Systems ein.
