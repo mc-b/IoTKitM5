@@ -9,9 +9,9 @@ Aktoren (Wandler; Antriebselemente) setzen die elektronischen Signale in mechani
 
 ### Beispiele
 
-* [DC Motor](#Gleichstrom-Motor) 
-* [Servo](#Servo) 
-* [Schrittmotor](#Schrittmotor)
+* [DC Motor](#gleichstrom-motor) 
+* [Servo](#servo) 
+* [Schrittmotor](#schrittmotor)
 
 ### Gleichstrom Motor
 ***
