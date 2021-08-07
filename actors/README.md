@@ -35,6 +35,34 @@ Elektromotor bezeichnet einen elektromechanischen Wandler (elektrische Maschine)
 * [ATOM Motion](https://docs.m5stack.com/en/atom/atom_motion) zur Ansteuerung von Motoren und Servos, inkl. eines Atom Lite. Verwendet [RZ7899](http://www.rz-mic.com/uploadfile/fj/201810310633.pdf).
 * [Module DC MOTOR](https://docs.m5stack.com/en/module/lego_plus) zur Ansteuerung von Lego Motoren.
 
+**Beispiel mit Atom Motion und DC Motor an M2** - [dcmotor-motion.m5f](dcmotor-motion.m5f)
+
+![](images/dcmotor-motion.png)
+
+- - -
+
+    from m5stack import *
+    from m5ui import *
+    from uiflow import *
+    from base.Motion import Motion
+    import time
+    
+    j = None
+    
+    motion = Motion()
+    rgb.setColorAll(0xffffff)
+    motion.set_motor_speed(2, 0)
+    while True:
+      for j in range(60, 121, 5):
+        motion.set_motor_speed(2, j)
+        wait(0.5)
+      wait_ms(2)
+      for j in range(60, 121, 5):
+        motion.set_motor_speed(2, j * -1)
+        wait(0.5)
+      wait_ms(2)
+      wait_ms(2)
+
 ### Servo 
 ***
 
