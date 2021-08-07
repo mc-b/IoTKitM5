@@ -68,6 +68,41 @@ Weitere Informationen und eine Ausführliche Einführung in Englisch [An Introdu
 
 * [Catch Unit](https://docs.m5stack.com/en/unit/catch) um die Möglichkeiten von Servos zu demonstrieren.
 
+**Beispiel mit Core2 und Catch Unit an Port A** - [servo-catch-unit.m5f](servo-catch-unit.m5f)
+
+![](images/servo-catch-unit.png)
+
+- - -
+
+**ACHTUNG**: der Servo zieht, am Anfang, viel Strom und schaltet den Core2 aus. Der Greifer sollte geöffnet sein, wenn das Programm geladen wird.
+
+    from m5stack import *
+    from m5stack_ui import *
+    from uiflow import *
+    import time
+    import unit
+    
+    screen = M5Screen()
+    screen.clean_screen()
+    screen.set_screen_bg_color(0xFFFFFF)
+    servo_1 = unit.get(unit.SERVO, unit.PORTA)
+    
+    i = None
+    
+    label0 = M5Label('Position', x=39, y=35, color=0x000, font=FONT_MONT_14, parent=None)
+    label1 = M5Label('Text', x=148, y=34, color=0x000, font=FONT_MONT_14, parent=None)
+    
+    while True:
+      for i in range(20, 81):
+        label1.set_text(str(i))
+        servo_1.write_angle(i)
+        wait_ms(100)
+      for i in range(80, 19, -1):
+        label1.set_text(str(i))
+        servo_1.write_angle(i)
+        wait_ms(100)
+      wait_ms(2)
+
 ### Schrittmotor
 ***
 
