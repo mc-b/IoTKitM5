@@ -40,3 +40,4 @@ Quelle: [M5Stack UART](https://docs.m5stack.com/en/uiflow/advanced/uart)
 
 * [Fingerabdrucksensor](https://docs.m5stack.com/en/unit/finger)
 * [LoraWAN Modem](https://docs.m5stack.com/en/unit/lorawan868)
+* [GPS Sensor](https://docs.m5stack.com/en/unit/gps)
