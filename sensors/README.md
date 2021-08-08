@@ -12,6 +12,9 @@ Quelle: Prof. Dr.-Ing. Michael Weyrich, http://wiki.zimt.uni-siegen.de/fertigung
 
 Sensoren sind technische Bauteile, die Eigenschaften der Umgebung (z. B.: Wärmestrahlung, Temperatur, Feuchtigkeit, Druck, Schall, Helligkeit oder Beschleunigung) erfassen und in ein weiter verarbeitbares elektrisches Signal umformen.
 
+**Die nachfolgenden Sensoren sind der Vollständigkeit aufgeführt.** An dessen Stelle kommen heute, sogenannte [MEMS Sensoren](https://www.digikey.ch/de/blog/mems-sensors-are-good-but-the-revolution-is-just-beginning) zum Einsatz. Diese sind im Kapitel [I²C/TWI](../i2c/) beschrieben.
+
+
 ### Hall Sensor 
 ***
 
