@@ -23,6 +23,7 @@ Dieses Repository basiert auf den Erfahrungen mit dem [IoTKitV1 - V3](https://gi
 
 * [HTTP und REST](http/) 
 * [MQTT](mqtt/)
+* [LoraWAN](lorawan/)
 
 ## Anwendungen / Umsetzungen
 

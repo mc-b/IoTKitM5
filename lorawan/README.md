@@ -2,8 +2,50 @@ LoraWAN
 -------
 ***
 
+![](images/lorawan.png)
 
-### AT Commands
+Quelle: mbed 
+- - - 
+
+Sie können sich ein LoRaWAN als Netzwerk mit virtualisierter Netzwerkschicht vorstellen. Die Geräte kommunizieren mit dem Netzwerkserver unter Verwendung des LoRaWAN-Protokolls und bilden ein LoRaWAN-Netzwerk. Wenn mehrere Basisstationen Ihr Gerät abhören, leiten alle Ihr Paket an den Netzwerkserver weiter. Dies bedeutet, dass ein LoRaWAN-Gerät nicht in einer bestimmten Zelle lokalisiert ist.
+
+
+Ein LoRaWAN-Netzwerk besteht aus drei grundlegenden Netzwerkelementen:
+* Gerät.
+* Basisstation.
+* Network Server.
+
+Die Basisstation hat die Aufgabe, über LoRa mit den Geräten in ihrem Empfangsbereich zu kommunizieren. Die eigentliche Netzwerksteuerung liegt in der Cloud, also im Netzwerkserver.
+
+### The Things Network
+***
+
+![](images/the-things-network.png)
+
+Quelle The Things Network
+- - -
+
+Das The Things Network (TTN) ist eine offene communitybasierte Initiative zur Errichtung eines energiesparenden Weitbereichs-Netzwerks für das Internet der Dinge.
+
+Im öffentlichen Community-Netzwerk von The Things Network gilt eine [Fair Use Policy](https://www.thethingsnetwork.org/forum/t/fair-use-policy-explained/1300), die die **Uplink-Sendezeit auf 30 Sekunden pro Tag** und die Downlink-Nachrichten auf **10 Nachrichten pro Tag** pro Knoten begrenzt.
+
+**Links**
+
+* [The Things Network Console](https://eu1.cloud.thethings.network/console/applications)
+
+### Unit LoRaWAN868
+***
+
+![](https://static-cdn.m5stack.com/resource/docs/static/assets/img/product_pics/unit/lorawan868/lorawan868_01.webp)
+
+Quelle: M5Stack
+- - -
+
+Unit LoRaWAN868 ist ein LoRaWAN-Kommunikationsmodul, das für die 868-MHz-Frequenz geeignet ist und von M5Stack eingeführt wurde. 
+
+Das Modul verwendet den [ASR6501](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/unit/lorawan/ASR650X%20AT%20Command%20Introduction-20190605.pdf), das die Fernkommunikation unterstützt und sowohl einen extrem geringen Stromverbrauch als auch eine hohe Empfindlichkeit aufweist.
+
+**AT Commands ASR6501**
 
 **Hardware/Firmware Info**
 
@@ -20,43 +62,7 @@ LoraWAN
 * `AT+CFREQBANDMASK?` - Read Frequency Band Mask (0001 = 0-7 channel, 0002 = ：8-15 channel)
 * `AT+CCLASS?` - Read Class (0 = A, 1 = B, 2 = C)
 * `AT+CNWKSKEY?` - Read NwkSKey
-
-**Debug**
-
 * `AT+ILOGLVL=5` - Set/Read Log Level
+* `AT+DTRX?` - Send/Receive Data
 
 
-Set/Read Join
-
-    AT+CJOIN?
-    
-    AT+CJOIN=1,1,10,8
-    
-Set JOIN parameter: enable auto-JOIN, the period of JOIN is 10s, and the maximum retry times of JOIN is 8 times
-
-ParaTag1 represent do the JOIN operation，ParaTag1’s value range：
-0– Stop JOIN
-1– Start JOIN, restart one JOIN procedure, for module which have enable the
-warm boot, do the oeration will clear the parameters of JOIN procedure.
-ParaTag2 represent if enable the auto-JOIN function, its factory value is 1,
-ParaTag2’s value range:
-0 – Disable auto-JOIN
-1 – Enable auto-JOIN. When module enter into passthrough mode, enable autoJOIN.
-ParaTag3 represent the period of JOIN, ParaTag3’s value range is 7~255, its
-unit is seconds.
-Factory default value：8
-ParaTag4 represent the maximum retry times of JOIN, ParaTag4’s value range is
-1~256    
-    
-
-Send/Receive Data
-
-    AT+DTRX?
-    
-     
-        
-
-### Links
-
-* [LoraWAN Modem Datenblatt](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/unit/lorawan/ASR650X%20AT%20Command%20Introduction-20190605.pdf)
-* [The Things Network Console](https://eu1.cloud.thethings.network/console/applications)
