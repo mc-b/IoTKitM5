@@ -29,6 +29,9 @@ Dieses Repository basiert auf den Erfahrungen mit dem [IoTKitV1 - V3](https://gi
 
 * [NFC / RFID](rfid/)
 * [Cloud Anbindung](cloud/) an Amazon (AWS) und Microsoft (Azure).
+* [Internet of Things – Machine Learning Fast Data Pipeline mit Docker/Kubernetes](pipeline/)
+* [Wearables](wearables/)
+* [Roboter](robot/)
 
 ## Kurse und Weiterbildung 
 
