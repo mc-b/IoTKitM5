@@ -60,7 +60,7 @@ HTML-Dokumente sind die Grundlage des World Wide Web und werden von Webbrowsern 
 
 In der Cloud stehen einen Reihe von Services zur Verfügung womit die Boards mit Steuerungsinformationen, wie Sonnen Auf- und Untergang, Wetterentwicklung etc. versorgt werden können.
 
-[ProgrammableWeb](http://www.programmableweb.com/apis/directory) liefert eine Übersicht dieser Dienste.
+[ProgrammableWeb](http://www.programmableweb.com/apis/directory) und [Public APIs](https://github.com/public-apis/public-apis) liefert eine Übersicht dieser Dienste.
 
 **Anwendungen** 
 
