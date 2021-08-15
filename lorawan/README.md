@@ -65,4 +65,46 @@ Das Modul verwendet den [ASR6501](https://m5stack.oss-cn-shenzhen.aliyuncs.com/r
 * `AT+ILOGLVL=5` - Set/Read Log Level
 * `AT+DTRX?` - Send/Receive Data
 
+### The Things Network und M5Stack
+***
 
+Verwendetes Material:
+* [LPS8 Indoor Multichannel LoRaWAN Gateway](https://www.bastelgarage.ch/lps8-indoor-multichannel-lorawan-gateway) mit neuster Firmware! - Base Station
+* [M5Stack BASIC](https://docs.m5stack.com/en/core/basic) oder [M5Stack Core2](https://docs.m5stack.com/en/core/core2). - End Device
+* [Unit LoRaWAN868](https://docs.m5stack.com/en/unit/lorawan868) - LoRaWAN Modem
+
+**Konfiguration Base Station**
+
+![](images/base-station.png)
+
+- - -
+
+Die Daten vom der Base Station sind in The Things Network zu übertragen. Dazu ist ein [Gateway](https://eu1.cloud.thethings.network/console/gateways) anzulegen und die Daten (Dev EUI etc.) der Base Station zu übertragen.
+
+**Konfiguration End Device in The Things Network**
+
+![](images/end-device.png)
+
+- - -
+
+Im The Things Network ist zuerst eine Application und dann eine [End Device](https://eu1.cloud.thethings.network/console/applications) anzulegen.
+
+* **DevEUI** kann generiert werden oder via obigen AT Befehlen aus dem Modem ausgelegen werden.
+* **AppEUI** ist immer `0000000000000001`
+* **AppKey** kann generiert werden oder via obigen AT Befehlen aus dem Modem ausgelegen werden.
+
+Die restlichen Felder müssen nicht gesetzt werden, bzw. können auf den Standardwerten verbleiben.
+
+**Programm**
+
+Die Kommunikation klappte nur mit dem [Arduino Beispiel](LoRaWAN868/LoRaWAN868.ino). Dazu ist zuerst die [Arduino IDE](https://docs.m5stack.com/en/arduino/arduino_core2_development) für M5Stack einzurichten.
+
+Nach erfolgter Einrichtung kann der entsprechende Arduino Sketch importiert werden.
+
+In diesem sind die obigen Informationen vom The Things Network zu übertragen:
+
+        sendATCMDAndRevice("AT+CDEVEUI=00BB9DA5B97XXXX\r");
+        sendATCMDAndRevice("AT+CAPPEUI=0000000000000001\r");
+        sendATCMDAndRevice("AT+CAPPKEY=27DFE264CA33AC1957C005EB48BXXXX\r");
+
+Programm compilieren und der M5Stack sendet Daten via Base Station an The Things Network.
