@@ -155,7 +155,7 @@ Dadurch erhalten wird neu `Nodes` für die Integration mit [Apache Kafka](https:
 
 Topics auslesen, lesen und schreiben auf Topics in Kafka Container, siehe [Projekt duk](https://github.com/mc-b/duk/tree/master/kafka).
 
-Der Flow zum importieren und anpassen, siehe [Node-RED-Kafka.json](Node-RED-Kafka.json).
+Der Flow zum importieren und anpassen, siehe [Node-RED-Kafka.json](https://raw.githubusercontent.com/iotkitv3/edge/main/Node-RED-Kafka.json).
 
 ***
 ### Machine Learning mit Juypter Notebooks
