@@ -103,7 +103,7 @@ Nach erfolgreicher Installation sind folgende Services verfügbar:
 * [mosquitto](https://projects.eclipse.org/projects/iot.mosquitto) auf Port 31883 (nur MQTT Broker ohne UI)
 * [Node-RED](https://nodered.org/) auf http://[ip vm]:32600
 * [Jupyter mit Machine Learning Notebooks](https://jupyter.org/) auf http://[ip vm]:32088
-* [Kubernetes Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) auf https://[ip vm]
+* [Kubernetes Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) auf https://[ip vm]:8443
 
 **ACHTUNG**: das ist eine Lernumgebung, werden die Ports gegen das gesamte Internet geöffnet ist die VM ungeschützt im Internet. Ports nur für eigene IP-Adresse (Router) öffnen.
 
