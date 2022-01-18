@@ -55,7 +55,7 @@ Evtl. muss der BPMN Prozess noch veröffentlicht werden.
 
 Erstellen Sie einen Account für die [AWS](https://aws.amazon.com/de/free/) oder [Azure](https://azure.microsoft.com/de-de/overview/what-is-azure/iaas/) Cloud.
 
-Erstellen Sie eine neue Virtuelle Maschine mit min. 2 CPUs, 4 GB RAM. Als Betriebsystem nehmen Sie Ubuntu ab der Version 18.04. Für AWS Academy siehe [hier](pipeline-aws.md).
+Erstellen Sie eine neue Virtuelle Maschine mit min. 2 CPUs, 4 GB RAM. Als Betriebsystem nehmen Sie Ubuntu ab der Version 20.04. 
 
 Im Feld `custom data` o.ä. füllen Sie folgende [Cloud-init](https://cloudinit.readthedocs.io/en/latest/) Konfiguration ein:
 
