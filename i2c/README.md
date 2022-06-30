@@ -50,7 +50,7 @@ Die Verwendung der LowLevel I2C Funktionen, gibt nur Sinn, wenn für ein I2C Ger
 * [RFID Reader](../rfid)
 * [NCIR](https://docs.m5stack.com/en/unit/ncir) Infrarot- Sensor. kann verwendet werden, um die Oberflächentemperatur eines menschlichen Körpers zu messen. [Beispiel mit Core2](ncir.m5f).
 
-
+**Beispiele**: in der jeweiligen Dokumentation, des Produktes, **EXAMPLE** anklicken.
 
 
 
