@@ -30,7 +30,7 @@ Der Bus braucht zur Terminierung zwei Widerstände von ca. 2.2K - 4.7K Ohm (je n
 
 **M5Stack Funktionen**
 
-![](https://static-cdn.m5stack.com/resource/docs/static/image/Advanced%20module/I2C.webp)
+![](https://static-cdn.m5stack.com/resource/docs/static/image/advanced/I2C.webp)
 
 Quelle: [M5Stack](https://docs.m5stack.com/en/uiflow/advanced/i2c)
 
@@ -38,18 +38,19 @@ Quelle: [M5Stack](https://docs.m5stack.com/en/uiflow/advanced/i2c)
 
 Der I2C Bus ist an jedem Controller als **Port A** vorhanden.
 
-Die Verwendung der I2C Funktionen, gibt nur Sinn, wenn für ein I2C Gerät keine entsprechenden Funktionen vorhanden sind.
+Die Verwendung der Lowlevel I2C Funktionen, gibt nur Sinn, wenn für ein I2C Gerät keine entsprechenden Funktionen vorhanden sind.
+
+Einfacher: [UIFlow Tutorial: Units hinzufügen und programmieren](https://docs.m5stack.com/en/uiflow/Units).
 
 **M5Stack Produkte**
 
 * [ToF - Distanzmesser](https://docs.m5stack.com/en/unit/tof)
-* [Env und II - Temperatur, Feuchtigkeit und Luftdruck Sensor](https://docs.m5stack.com/en/unit/envII)
+* [Env und II/III - Temperatur, Feuchtigkeit und Luftdruck Sensor](https://docs.m5stack.com/en/unit/envIII)
 * [TVOC/eCO2](https://docs.m5stack.com/en/unit/tvoc)
 * [RFID Reader](../rfid)
 * [NCIR](https://docs.m5stack.com/en/unit/ncir) Infrarot- Sensor. kann verwendet werden, um die Oberflächentemperatur eines menschlichen Körpers zu messen. [Beispiel mit Core2](ncir.m5f).
 
-**Beispiele**: in der Dokumentation **EXAMPLE** anklicken.
 
-[UIFlow Tutorial: Units hinzufügen und programmieren](https://docs.m5stack.com/en/uiflow/Units).
+
 
 
