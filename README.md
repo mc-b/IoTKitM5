@@ -5,6 +5,7 @@ Beispiele für die [M5STACK](https://docs.m5stack.com/en/products) Controller.
 
 Dieses Repository basiert auf den Erfahrungen mit dem [IoTKitV1 - V3](https://github.com/iotkitv3/intro).
 
+
 ## Grundlagen
 
 * [Hardware](hw/)
@@ -32,6 +33,8 @@ Dieses Repository basiert auf den Erfahrungen mit dem [IoTKitV1 - V3](https://gi
 * [Internet of Things – Machine Learning Fast Data Pipeline mit Docker/Kubernetes](pipeline/)
 * [Wearables](wearables/)
 * [Roboter](robot/)
+* [MQTT / TelegramBot Backend Beispiel](https://github.com/alptbz/mqtttelegramdemo)
+
 
 ## Kurse und Weiterbildung 
 
@@ -43,3 +46,8 @@ Dieses Repository basiert auf den Erfahrungen mit dem [IoTKitV1 - V3](https://gi
 
 * [Die drei Hauptklassen von IoT](https://www.arm.com/products/iot/soc)
 * [Geschäftsmodelle und IoT](https://www.iot-lab.ch/publications/#whitepapers)
+
+
+- - - 
+
+Erweiterung und Ergänzungen von Philipp Albrecht.

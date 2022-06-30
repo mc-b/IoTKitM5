@@ -15,6 +15,55 @@ Sensoren sind technische Bauteile, die Eigenschaften der Umgebung (z. B.: Wärme
 **Die nachfolgenden Sensoren sind der Vollständigkeit aufgeführt.** An dessen Stelle kommen heute, sogenannte [MEMS Sensoren](https://www.digikey.ch/de/blog/mems-sensors-are-good-but-the-revolution-is-just-beginning) zum Einsatz. Diese sind im Kapitel [I²C/TWI](../i2c/) beschrieben.
 
 
+### Enviroment 3 Sensor Unit
+***
+
+![](https://static-cdn.m5stack.com/resource/docs/static/assets/img/product_pics/unit/envIII/enviii_01.webp)
+
+Enviroment III Unit
+
+Quelle: M5Stack
+
+- - -
+
+Der Umgebungsensor 3 integriert [SHT30](https://web.archive.org/web/20220216185847/https://www.mouser.com/datasheet/2/682/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital-971521.pdf) und den [QMP6988](https://web.archive.org/web/20220216185926/http://www.siitek.com.cn/Upfiles/down/QMP6988_Preliminary_Rev03.pdf), um die Temperatur, Feuchtigkeit und den Atmosphärischen Druck zu messen.
+
+[Dokumentation ENV III M5Stack docs](https://docs.m5stack.com/en/unit/envIII)
+
+### Gesture Unit
+***
+![](https://static-cdn.m5stack.com/resource/docs/static/assets/img/product_pics/unit/gesture/gesture_01.webp)
+
+Gesture Unit
+
+Quelle: M5Stack
+
+- - -
+
+Das Gesture Unit basiert auf dem [PAJ7620U2 Chip](https://web.archive.org/web/20220216185134/https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/unit/gesture/paj7620u2_datasheet.pdf). Dieser erkennt bis zu 9 kontaktlosen 3D Gesten. 
+
+Standardmässig unterstützt der Sensor folgende Gesten:
+ - Up, Down, Left, Right, Front, Back, Clockwise, Counterclockwise, Quick Wave
+
+[Dokumentation Gesture M5Stack docs](https://docs.m5stack.com/en/unit/gesture)
+
+### ToF Unit - Time of Flight
+***
+![](https://static-cdn.m5stack.com/resource/docs/static/assets/img/product_pics/unit/tof/unit_tof_01.webp)
+
+ToF Unit
+
+Quelle: M5Stack
+
+- - -
+
+Der Time-of-Flight Sensor ermittelt die Distanz zwischen dem Emissionspunkt und einem Objekt, indem es die Round-Trip-Time eines künstlichen Lichtsignales (Laser) misst. 
+
+Der Sensor kommuniziert mit dem M5Core via I2C (0x29).
+
+[Dokumentation Tof M5Stack docs](https://docs.m5stack.com/en/unit/tof)
+
+
 ### Hall Sensor 
 ***
 
@@ -31,6 +80,9 @@ Ein [Hall Sensor](http://de.wikipedia.org/wiki/Hall-Sensor) (auch Hall-Sonde ode
 [Hall-Effekt-Unit](https://docs.m5stack.com/en/unit/hall) integriert mit drei A3144E Hall-Sensor-Schaltern, die von integrierten Gate-Schaltungen der Serie 74HC verarbeitet werden.
 
 Ein Signal mit 0 Pegel kann erzeugt werden, wenn sich der S-Pol des Magneten nahe der Oberseite des Sensors oder der N-Pol nahe der Rückseite befindet und die interne LED-Anzeige aufleuchtet.
+
+[Dokumentation Hall M5Stack docs](https://docs.m5stack.com/en/unit/hall)
+
 
 **Anwendungen**
 

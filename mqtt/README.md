@@ -1,4 +1,4 @@
-## MQTT (Message Queue Telemetry Transport)
+# MQTT (Message Queue Telemetry Transport)
 ***
 
 > [⇧ **Home**](../README.md)
@@ -14,7 +14,7 @@ MQTT implementiert das [**Publish/Subscribe-Pattern**](http://de.wikipedia.org/w
 
 Im obigen Beispiel funktioniert die komplette Kommunikation rein über Topics, und der Sensor (links) und die Endgeräte (rechts) wissen nichts über die Existenz des jeweils anderen.
 
-### Beispiel Topics
+## Beispiel Topics
 
 	Zuhause/Wohnzimmer/Temperatur
 	Zuhause/Wohnzimmer/Luftfeuchtigkeit
@@ -23,7 +23,7 @@ Im obigen Beispiel funktioniert die komplette Kommunikation rein über Topics, u
 
 Topics haben noch ein weiteres wichtiges Konzept - Wildcards. In oben stehenden Codebeispiel sind vier Topics aufgelistet, und je ein Sensor sendet eine neue Nachricht auf den jeweiligen Topic, sobald sich ein Wert geändert hat. Man kann nun je nach Anwendungsfall Wildcards benutzen, um mehrere Topics zu abonnieren.
 
-### Beispiel Wildcards 
+## Beispiel Wildcards 
 
 	Zuhause/+/Temperatur
 	Zuhause/Wohnzimmer/#
@@ -31,18 +31,18 @@ Topics haben noch ein weiteres wichtiges Konzept - Wildcards. In oben stehenden 
 
 Oben sind alle möglichen Wildcard-Operatoren aufgelistet. Im ersten Fall bekommt die mobile Anwendung nur alle Nachrichten über neue Temperaturwerte, im zweiten Fall nur alle Werte aus dem Wohnzimmer und im dritten Fall alle Werte. Dabei lässt sich der +-Operator immer nur für eine Hierarchiestufe einsetzen und der #-Operator für beliebig viele Hierarchiestufen mit der Bedingung, dass dieser am Ende stehen muss.
 
-### Mechanismen zur Qualitätskontrolle 
+## Mechanismen zur Qualitätskontrolle 
 
 Ein weiteres wichtiges Konzept sind die drei Servicequalitäten bei der Datenübertragung 0, 1 und 2. Die Zusicherung variiert von keiner Garantie (Level 0) über die, dass die Nachricht mindestens einmal ankommt (Level 1), bis hin zur Garantie, dass die Nachricht genau einmal ankommt (Level 2).
 
-## MQTT Publish Beispiel
+# MQTT Publish Beispiel 1
 ***
 
 Mittels Publish (unten) kann eine Meldung zum MQTT Broker bzw. Topic gesendet werden.
 
 Ein anderes Board oder der Mosquitto Client mosquitto_sub kann dieses Topic Abonnieren (subscribe).
 
-### Client
+## Client
 
 Mittels der Client Utilities von [Mosquitto](https://projects.eclipse.org/projects/technology.mosquitto) können Werte abgefragt oder gesendet werden.
 
@@ -60,7 +60,7 @@ Beispiel: RGB Led
 
 Eine Liste von Öffentlichen MQTT gibt es [hier](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers).
 
-### Beispiel
+## Beispiel
 
 ![](images/pub-sub.png)
 
@@ -90,7 +90,51 @@ Abonniert das Topic `m5stack/rgb` und setzt die Farbe des mittleren Leds.
     m5mqtt.subscribe(str('m5stack/rgb'), fun_m5stack_rgb_)
     m5mqtt.start() 
 
-### Links 
+
+# MQTT Publish Beispiel 2
+
+Im nachfolgenden Beispiel werden die MQTT Messages mit dem Tool [MQTT Explorer](https://github.com/thomasnordquist/MQTT-Explorer/releases) visualisiert. Das Tool ist ein praktisches Entwickler- und Debugging Tool, dass die grundlegendsten Funktionen von MQTT abdeckt und weitere nützliche Zusatzfunktionen, wie Verbindungsverwaltung und Visualisierung von Werten in Diagrammen, beinhaltet. 
+
+Als Grundlage dient das Programm aus dem [cloud](../cloud) Abschnitt.
+
+[![01_MQTT](images/01_MQTT.jpg)](https://raw.githubusercontent.com/alptbz/m242/main/mqtt/videos/01_MQTT.webm "01_MQTT")
+
+
+# MQTT - Java
+
+Ein Beispiel für einen MQTT Client mit Java und der Paho Library: https://github.com/alptbz/mqttdemo/
+
+```java
+...
+
+MemoryPersistence persistence = new MemoryPersistence();
+        client = new MqttClient(broker, clientId, persistence);
+        client.setCallback(this);
+        MqttConnectOptions connOpts = new MqttConnectOptions();
+        if(username != null) {
+            connOpts.setUserName(username);
+            connOpts.setPassword(password.toCharArray());
+        }
+        connOpts.setCleanSession(true);
+        logger.info("Connecting to broker: "+broker);
+        client.connect(connOpts);
+        logger.info("Connected");
+        isRunning = true;
+
+...
+```
+
+## Telegram + MQTT ChatBot Beispiele
+![chatbot](images/chatbot.PNG)
+
+Ein Chatbot ist ein nützliches Tool, um mit wenig Code schnell ein UI zu bauen. Der Chat kann nicht nur für die Steuerung wie auch als Log verwendet werden. 
+
+MQTT + Telegram Beispiele:
+ - **Python:** https://github.com/alptbz/mqtttelegramdemo
+ - **Java:** https://github.com/alptbz/mqtttelegramdemojava
+
+
+## Links 
 
 *   [Ausführlicher Artikel auf heise.de](http://www.heise.de/developer/artikel/MQTT-Protokoll-fuer-das-Internet-der-Dinge-2168152.html)
 *   [MQTT Client Library Encyclopedia - Paho Embedded](https://www.hivemq.com/blog/mqtt-client-library-encyclopedia-paho-embedded/) - gute Einführung in mbed Library
@@ -100,4 +144,5 @@ Abonniert das Topic `m5stack/rgb` und setzt die Farbe des mittleren Leds.
 *   [Practical MQTT with Paho](http://www.infoq.com/articles/practical-mqtt-with-paho)
 *   [Paho UI Utilities für MQTT](https://wiki.eclipse.org/Paho/GUI_Utility)
 *   [MQTT Toolbox - MQTT Client Chrome App](https://www.hivemq.com/blog/mqtt-toolbox-mqtt-client-chrome-app/) - einfacher MQTT Client um Meldungen zu abonnieren (subsribe).
+*   [MQTT Explorer](https://github.com/thomasnordquist/MQTT-Explorer/releases)
 
