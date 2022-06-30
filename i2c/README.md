@@ -28,7 +28,7 @@ Der Bus braucht zur Terminierung zwei Widerstände von ca. 2.2K - 4.7K Ohm (je n
 *   Ansprechen von Peripherie Bausteinen wie Temperatursensor.
 *   Ansprechen von Analog/Digital and Digital/Analog IC&#039;s.
 
-**M5Stack Funktionen**
+**M5Stack LowLevel Funktionen**
 
 ![](https://static-cdn.m5stack.com/resource/docs/static/image/advanced/I2C.webp)
 
@@ -38,9 +38,9 @@ Quelle: [M5Stack](https://docs.m5stack.com/en/uiflow/advanced/i2c)
 
 Der I2C Bus ist an jedem Controller als **Port A** vorhanden.
 
-Die Verwendung der Lowlevel I2C Funktionen, gibt nur Sinn, wenn für ein I2C Gerät keine entsprechenden Funktionen vorhanden sind.
+Die Verwendung der LowLevel I2C Funktionen, gibt nur Sinn, wenn für ein I2C Gerät keine entsprechenden Funktionen vorhanden sind.
 
-Einfacher: [UIFlow Tutorial: Units hinzufügen und programmieren](https://docs.m5stack.com/en/uiflow/Units).
+**Einfacher**: [UIFlow Tutorial: Units hinzufügen und programmieren](https://docs.m5stack.com/en/uiflow/Units).
 
 **M5Stack Produkte**
 
