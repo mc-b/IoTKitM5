@@ -82,8 +82,8 @@ Im Feld `custom data` o.ä. füllen Sie folgende [Cloud-init](https://cloudinit.
       - sudo chown -f -R ubuntu /home/ubuntu/.kube
       - sudo snap install kubectl --classic
       - sudo mkdir /data
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/lernkube/master/data/DataVolume.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/addons/dashboard-skip-login-no-ingress.yaml
+      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/lerncloud/main/data/DataVolume.yaml
+      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/lerncloud/main/addons/dashboard.yaml
       - (cd /tmp; git clone https://github.com/mc-b/mlg; cd mlg; microk8s kubectl apply -f jupyter/jupyter-mlg.yaml; cp -rpv data/* /data/ )
       - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/iot/mosquitto.yaml
       - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/kafka/zookeeper.yaml
