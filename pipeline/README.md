@@ -67,7 +67,7 @@ Im Feld `custom data` o.ä. füllen Sie folgende [Cloud-init](https://cloudinit.
         home: /home/ubuntu
         shell: /bin/bash
         lock_passwd: false
-        plain_text_passwd: 'password'        
+        plain_text_passwd: 'insecure'        
     # login ssh and console with password
     ssh_pwauth: true
     disable_root: false    
