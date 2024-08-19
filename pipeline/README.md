@@ -64,39 +64,27 @@ Im Feld `custom data` o.ä. füllen Sie folgende [Cloud-init](https://cloudinit.
       - name: ubuntu
         sudo: ALL=(ALL) NOPASSWD:ALL
         groups: users, admin
-        home: /home/ubuntu
         shell: /bin/bash
         lock_passwd: false
-        plain_text_passwd: 'insecure'        
+        plain_text_passwd: 'insecure'       
+        ssh_authorized_keys:
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUHol1mBvP5Nwe3Bzbpq4GsHTSw96phXLZ27aPiRdrzhnQ2jMu4kSgv9xFsnpZgBsQa84EhdJQMZz8EOeuhvYuJtmhAVzAvNjjRak+bpxLPdWlox1pLJTuhcIqfTTSfBYJYB68VRAXJ29ocQB7qn7aDj6Cuw3s9IyXoaKhyb4n7I8yI3r0U30NAcMjyvV3LYOXx/JQbX+PjVsJMzp2NlrC7snz8gcSKxUtL/eF0g+WnC75iuhBbKbNPr7QP/ItHaAh9Tv5a3myBLNZQ56SgnSCgmS0EUVeMNsO8XaaKr2H2x5592IIoz7YRyL4wlOmj35bQocwdahdOCFI7nT9fr6f insecure@lerncloud
     # login ssh and console with password
     ssh_pwauth: true
-    disable_root: false    
+    disable_root: false 
     packages:
-      - unzip
+      - jq
+      - shellinabox
     runcmd:
-      - sudo snap install microk8s --classic
-      - sudo usermod -a -G microk8s ubuntu
-      - sudo microk8s enable dns ingress
-      - sudo mkdir -p /home/ubuntu/.kube
-      - sudo microk8s config >/home/ubuntu/.kube/config
-      - sudo chown -f -R ubuntu /home/ubuntu/.kube
-      - sudo snap install kubectl --classic
-      - sudo mkdir /data
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/lerncloud/main/data/DataVolume.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/lerncloud/main/addons/dashboard.yaml
-      - (cd /tmp; git clone https://github.com/mc-b/mlg; cd mlg; microk8s kubectl apply -f jupyter/jupyter-mlg.yaml; cp -rpv data/* /data/ )
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/iot/mosquitto.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/kafka/zookeeper.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/kafka/kafka.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/iot.kafka/master/iot-kafka-alert.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/iot.kafka/master/iot-kafka-consumer.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/iot.kafka/master/iot-kafka-pipe.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/iot/nodered-kafka.yaml
-      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/misegr/master/bpmn/camunda.yaml
-      - sudo apt-get update  
-      - sudo apt-get install -y mosquitto-clients curl git unzip
-      - sudo chmod -R o=u,g=u /data  
-      - sudo chmod 777 /data 
+      - curl -sfL https://raw.githubusercontent.com/mc-b/lerncloud/main/services/nfsshare.sh | bash -  
+      - curl -sfL https://raw.githubusercontent.com/mc-b/lerncloud/main/services/vpn.sh | bash -
+      - curl -sfL https://raw.githubusercontent.com/mc-b/lerncloud/main/services/microk8s.sh | bash -
+      - curl -sfL https://raw.githubusercontent.com/mc-b/lerncloud/main/services/microk8saddons.sh | bash -
+      - sudo su - ubuntu -c "curl -sfL https://raw.githubusercontent.com/mc-b/lerncloud/main/services/repository.sh | bash -s https://github.com/mc-b/duk"
+      - sudo su - ubuntu -c "curl -sfL https://raw.githubusercontent.com/mc-b/lerncloud/main/services/knative.sh | bash -"  
+      - sudo su - ubuntu -c "curl -sfL https://raw.githubusercontent.com/mc-b/modtec/master/scripts/jupyter-notebook.sh | bash -"  
+      - curl -sfL https://raw.githubusercontent.com/mc-b/lerncloud/main/services/k8stools.sh | bash -       
+      - microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/iot/mosquitto.yaml  
 
 Nach erfolgreicher Installation sind folgende Services verfügbar:
 * [Camunda BPMN Workflow Engine](https://camunda.com/) auf http://[ip vm]:30880/camunda/
