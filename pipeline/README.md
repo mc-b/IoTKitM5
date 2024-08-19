@@ -87,10 +87,8 @@ Im Feld `custom data` o.ä. füllen Sie folgende [Cloud-init](https://cloudinit.
       - microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/iot/mosquitto.yaml  
 
 Nach erfolgreicher Installation sind folgende Services verfügbar:
-* [Camunda BPMN Workflow Engine](https://camunda.com/) auf http://[ip vm]:30880/camunda/
 * [mosquitto](https://projects.eclipse.org/projects/iot.mosquitto) auf Port 31883 (nur MQTT Broker ohne UI)
-* [Node-RED](https://nodered.org/) auf http://[ip vm]:32600
-* [Jupyter mit Machine Learning Notebooks](https://jupyter.org/) auf http://[ip vm]:32088
+* [Jupyter mit Machine Learning Notebooks](https://jupyter.org/) auf http://[ip vm]:32188/tree/work/mlg  
 * [Kubernetes Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) auf https://[ip vm]:8443
 
 **ACHTUNG**: das ist eine Lernumgebung, werden die Ports gegen das gesamte Internet geöffnet ist die VM ungeschützt im Internet. Ports nur für eigene IP-Adresse (Router) öffnen.
