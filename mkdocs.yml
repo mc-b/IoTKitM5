@@ -1,0 +1,4 @@
+site_name: IoTKitM5
+docs_dir: .
+nav:
+- README: README.md

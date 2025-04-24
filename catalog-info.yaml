@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: IoTKitM5
+  namespace: mc-b
+  description: 'IoT Teil zum Kurs: Moderne Technologien mit IoT, AI, Container, Kubernetes'
+  tags:
+  - containers
+  - ioe
+  - iot
+  - kubernetes
+  - education
+  links:
+  - url: https://github.com/mc-b/IoTKitM5
+    title: Repository
+    icon: github
+  annotations:
+    github.com/project-slug: mc-b/IoTKitM5
+    backstage.io/source-location: url:https://github.com/mc-b/IoTKitM5
+    # backstage.io/techdocs-ref: url:https://github.com/mc-b/IoTKitM5
+spec:
+  type: other
+  lifecycle: production
+  owner: group:mc-b/mc-b
