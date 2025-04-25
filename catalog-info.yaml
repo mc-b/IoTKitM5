@@ -10,6 +10,7 @@ metadata:
   - iot
   - kubernetes
   - education
+  - iotkit
   links:
   - url: https://github.com/mc-b/IoTKitM5
     title: Repository
