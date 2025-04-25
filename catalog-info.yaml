@@ -9,7 +9,6 @@ metadata:
   - ioe
   - iot
   - kubernetes
-  - education
   - iotkit
   links:
   - url: https://github.com/mc-b/IoTKitM5
@@ -20,6 +19,6 @@ metadata:
     backstage.io/source-location: url:https://github.com/mc-b/IoTKitM5
     # backstage.io/techdocs-ref: url:https://github.com/mc-b/IoTKitM5
 spec:
-  type: other
+  type: education
   lifecycle: production
   owner: group:mc-b/mc-b
