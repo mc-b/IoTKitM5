@@ -10,6 +10,8 @@ metadata:
   - iot
   - kubernetes
   - iotkit
+  - python
+  - m5stack
   links:
   - url: https://github.com/mc-b/IoTKitM5
     title: Repository
